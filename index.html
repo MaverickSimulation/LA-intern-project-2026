@@ -782,6 +782,7 @@
         </div>
         <nav>
           <a href="#scope">Scope</a>
+          <a href="#matlab">MATLAB Use</a>
           <a href="#trainer">Trainer Screen</a>
           <a href="#calibration">Calibration</a>
           <a href="#roadmap">Roadmap</a>
@@ -828,6 +829,7 @@
                 <span class="chip">FastAPI backend</span>
                 <span class="chip">SQLite tracking</span>
                 <span class="chip">Doctor-approved JSON</span>
+                <span class="chip">MATLAB as support tool</span>
               </div>
             </div>
             <div class="side-card">
@@ -895,6 +897,88 @@
           </div>
         </div>
       </section>
+
+      <section class="container" id="matlab">
+        <div class="section-head">
+          <div>
+            <h2>MATLAB recommendation — use it as a support tool</h2>
+            <p>
+              Since both interns are comfortable with MATLAB, they may use it
+              for DICOM/CBCT exploration and image preparation. However, MATLAB
+              should not become the main app stack for the final prototype.
+            </p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Where MATLAB is useful</h3>
+            <ul class="list">
+              <li><span class="check">✓</span><span>DICOM / CBCT slice exploration</span></li>
+              <li><span class="check">✓</span><span>Image preprocessing and contrast adjustment</span></li>
+              <li><span class="check">✓</span><span>Choosing useful axial / coronal reference slices</span></li>
+              <li><span class="check">✓</span><span>Exporting PNG reference images for the app</span></li>
+              <li><span class="check">✓</span><span>Preparing temporary landmark annotations</span></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>What remains the final prototype stack</h3>
+            <ul class="list">
+              <li><span class="num">1</span><span>React for user interface screens</span></li>
+              <li><span class="num">2</span><span>Three.js for the 3D jaw model viewer</span></li>
+              <li><span class="num">3</span><span>FastAPI for case logic and validation</span></li>
+              <li><span class="num">4</span><span>SQLite for storing attempts and scores</span></li>
+              <li><span class="num">5</span><span>Electron for the desktop wrapper</span></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Important boundary</h3>
+            <div class="note-box">
+              MATLAB can be used to prepare reference images and explore DICOM
+              data, but the final application should not depend on MATLAB to
+              run. All clinical values, landmarks, injection zones, and feedback
+              text must remain in JSON so the app can run independently.
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 22px">
+          <h3>Recommended MATLAB workflow for interns</h3>
+          <div class="grid-3">
+            <div class="softbox">
+              <h4>Step 1 — Explore</h4>
+              <ul>
+                <li>Open DICOM / CBCT data in MATLAB.</li>
+                <li>Review axial and coronal slices.</li>
+                <li>Identify useful reference views.</li>
+              </ul>
+            </div>
+            <div class="softbox">
+              <h4>Step 2 — Export</h4>
+              <ul>
+                <li>Crop and adjust contrast if needed.</li>
+                <li>Export selected slices as PNG files.</li>
+                <li>Place images inside <code>/data/reference_images/</code>.</li>
+              </ul>
+            </div>
+            <div class="softbox">
+              <h4>Step 3 — Use in app</h4>
+              <ul>
+                <li>React displays the PNG in the DICOM reference panel.</li>
+                <li>FastAPI still handles validation and scoring.</li>
+                <li>JSON remains the source of truth.</li>
+              </ul>
+            </div>
+          </div>
+          <pre>MATLAB
+  → DICOM / CBCT exploration
+  → reference slice selection
+  → PNG export
+  → React DICOM reference panel
+
+React + Three.js + FastAPI + SQLite + Electron
+  → final working desktop prototype</pre>
+        </div>
+      </section>
+
 
       <section class="container">
         <div class="section-head">
