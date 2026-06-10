@@ -913,21 +913,51 @@
           <div class="card">
             <h3>Where MATLAB is useful</h3>
             <ul class="list">
-              <li><span class="check">✓</span><span>DICOM / CBCT slice exploration</span></li>
-              <li><span class="check">✓</span><span>Image preprocessing and contrast adjustment</span></li>
-              <li><span class="check">✓</span><span>Choosing useful axial / coronal reference slices</span></li>
-              <li><span class="check">✓</span><span>Exporting PNG reference images for the app</span></li>
-              <li><span class="check">✓</span><span>Preparing temporary landmark annotations</span></li>
+              <li>
+                <span class="check">✓</span
+                ><span>DICOM / CBCT slice exploration</span>
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span>Image preprocessing and contrast adjustment</span>
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span>Choosing useful axial / coronal reference slices</span>
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span>Exporting PNG reference images for the app</span>
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span>Preparing temporary landmark annotations</span>
+              </li>
             </ul>
           </div>
           <div class="card">
             <h3>What remains the final prototype stack</h3>
             <ul class="list">
-              <li><span class="num">1</span><span>React for user interface screens</span></li>
-              <li><span class="num">2</span><span>Three.js for the 3D jaw model viewer</span></li>
-              <li><span class="num">3</span><span>FastAPI for case logic and validation</span></li>
-              <li><span class="num">4</span><span>SQLite for storing attempts and scores</span></li>
-              <li><span class="num">5</span><span>Electron for the desktop wrapper</span></li>
+              <li>
+                <span class="num">1</span
+                ><span>React for user interface screens</span>
+              </li>
+              <li>
+                <span class="num">2</span
+                ><span>Three.js for the 3D jaw model viewer</span>
+              </li>
+              <li>
+                <span class="num">3</span
+                ><span>FastAPI for case logic and validation</span>
+              </li>
+              <li>
+                <span class="num">4</span
+                ><span>SQLite for storing attempts and scores</span>
+              </li>
+              <li>
+                <span class="num">5</span
+                ><span>Electron for the desktop wrapper</span>
+              </li>
             </ul>
           </div>
           <div class="card">
@@ -956,7 +986,9 @@
               <ul>
                 <li>Crop and adjust contrast if needed.</li>
                 <li>Export selected slices as PNG files.</li>
-                <li>Place images inside <code>/data/reference_images/</code>.</li>
+                <li>
+                  Place images inside <code>/data/reference_images/</code>.
+                </li>
               </ul>
             </div>
             <div class="softbox">
@@ -968,17 +1000,18 @@
               </ul>
             </div>
           </div>
-          <pre>MATLAB
+          <pre>
+MATLAB
   → DICOM / CBCT exploration
   → reference slice selection
   → PNG export
   → React DICOM reference panel
 
 React + Three.js + FastAPI + SQLite + Electron
-  → final working desktop prototype</pre>
+  → final working desktop prototype</pre
+          >
         </div>
       </section>
-
 
       <section class="container">
         <div class="section-head">
@@ -2635,16 +2668,43 @@ React + Three.js + FastAPI + SQLite + Electron
           <div class="card">
             <h3>Recommended folder structure</h3>
             <div class="folder">
-              dental-la-trainer/ ├── README.md ├── docs/ │ ├── setup-guide.md │
-              ├── api-documentation.md │ ├── ui-flow.md │ ├──
-              validation-logic.md │ ├── clinical-calibration-notes.md │ └──
-              known-limitations.md ├── backend/ │ ├── requirements.txt │ └──
-              app/ │ ├── main.py │ ├── routes/ │ ├── services/ │ └── utils/ ├──
-              frontend/ │ ├── public/ │ └── src/ │ ├── api/ │ ├── components/ │
-              ├── pages/ │ └── styles/ ├── desktop/ │ ├── main.js │ └──
-              preload.js └── data/ ├── models/ │ └──
-              clinical_calibration_adult_mandible_v1.json ├── cases/ ├── dicom/
-              └── reference_images/
+              <pre>
+dental-la-trainer/
+├─ README.md
+├─ docs/
+│  ├─ setup-guide.md
+│  ├─ api-documentation.md
+│  ├─ ui-flow.md
+│  ├─ validation-logic.md
+│  ├─ clinical-calibration-notes.md
+│  └─ known-limitations.md
+├─ backend/
+│  ├─ requirements.txt
+│  ├─ routes/
+│  ├─ services/
+│  └─ utils/
+├─ app/
+│  ├─ main.py
+│  ├─ routes/
+│  ├─ services/
+│  └─ utils/
+├─ frontend/
+│  ├─ public/
+│  └─ src/
+│     ├─ api/
+│     ├─ components/
+│     ├─ pages/
+│     ├─ styles/
+│     ├─ desktop/
+│     │  └─ main.js
+│     └─ preload.js
+├─ data/
+│  ├─ models/
+│  │  └─ clinical_calibration_adult_mandible_v1.json
+│  ├─ cases/
+│  ├─ dicom/
+│  └─ reference_images/</pre
+              >
             </div>
           </div>
         </div>
